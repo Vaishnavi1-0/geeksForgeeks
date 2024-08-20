@@ -1,0 +1,19 @@
+class Solution {
+    static void reArrange(int[] arr, int N) {
+        int l=0,r=1;
+        
+        while(l<N && r<N){
+             if((arr[l]%2 != 0) && (arr[r]%2 == 0)){
+                int temp = arr[l];
+                arr[l] = arr[r];
+                arr[r] = temp;
+            }
+            if(arr[l]%2 == 0){
+                l += 2;
+            }
+            if(arr[r]%2 != 0){
+                r +=2;
+            }
+        }
+    }
+};
